@@ -1,3 +1,4 @@
+// To execute from terminal, invoke:  go test -bench=.
 package main
 
 import (
