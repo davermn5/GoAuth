@@ -4,10 +4,19 @@ package main
 import (
 	"Greetings" //Placing this package name here, and then running 'go mod tidy' (see below) creates the required dependency (to the Greetings module package code)
 	"fmt"
+	"log"
 )
 
 func main() {
-	message := Greetings.Hello("Gladys")
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+
+	message, err := Greetings.Hello("Peabody")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(message)
 }
 
