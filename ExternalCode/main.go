@@ -5,7 +5,7 @@ import "fmt"
 import "rsc.io/quote"
 
 func main() {
-	fmt.Println(quote.Go())
+	fmt.Printf("Today's message: %v\n", quote.Go())
 }
 
 // To use, then run: go mod tidy (finds & downlaads the parent module [rsc.io/quote v1.5.2] (for this package that you imported below: import "rsc.io/quote" )
