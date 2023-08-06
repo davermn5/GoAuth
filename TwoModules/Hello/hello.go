@@ -11,7 +11,7 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	message, err := Greetings.Hello("")
+	message, err := Greetings.Hello("Jehosevat")
 
 	if err != nil {
 		log.Fatal(err)
