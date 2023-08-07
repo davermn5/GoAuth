@@ -27,3 +27,8 @@ func main() {
 
 // Also, then run (from within the Hello directory): go mod tidy (which synchronizes the Hello module's dependencies, adding those required by the code, but not yet tracked in the module.
 //  And you will see the hello.mod file now contains a 'require' directive with associated value.
+
+// To compile, either: go build
+// To compile and install on system:
+//  go list -f '{{.Target}}' (copy the resultant "install" path) up to 'bin' e.g. /Users/<name>/go/bin
+//   Then add this install path to your $PATH by editing the following file (sudo nano /etc/paths.d/newfile ...then drop the install path (from above) into this file called 'newfile'.
