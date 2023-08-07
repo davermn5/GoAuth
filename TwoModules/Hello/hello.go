@@ -11,13 +11,15 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	message, err := Greetings.Hello("Jehosevat")
+	// A slice of names:
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	messages, err := Greetings.Hellos(names)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
 
 //Then run: go mod edit -replace Greetings=../Greetings
